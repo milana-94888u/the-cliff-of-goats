@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="The Cliff Of Goats"
+run/main_scene="res://src/scenes/cliff/cliff.tscn"
+config/features=PackedStringArray("4.1", "GL Compatibility")
+config/icon="res://assets/sprites/goat/dall-schaf-white-f.png"
+
+[autoload]
+
+GrassFindManager="*res://src/autoload/grass_find_manager.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="The Cliff Of Goats"
+
+[layer_names]
+
+2d_physics/layer_1="env"
+2d_physics/layer_2="goats"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=1
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
